@@ -7,6 +7,7 @@ namespace SymfonyLab\RocketGateReportBundle\Repository;
 use SymfonyLab\RocketGateReport\GatewayServiceInterface;
 use SymfonyLab\RocketGateReport\MerchantInterface;
 use SymfonyLab\RocketGateReport\Reports\MembershipsRequest;
+use SymfonyLab\RocketGateReportBundle\Model\Subscription;
 use SymfonyLab\RocketGateReportBundle\Model\SubscriptionInterface;
 
 class SubscriptionRepository implements SubscriptionRepositoryInterface
@@ -38,8 +39,10 @@ class SubscriptionRepository implements SubscriptionRepositoryInterface
         ;
 
         $response = $this->gatewayService->request($request);
+        if (!isset($response[0])) {
+            return null;
+        }
 
-        var_dump($response);
-        die();
+        return Subscription::createByArray($response[0]);
     }
 }
