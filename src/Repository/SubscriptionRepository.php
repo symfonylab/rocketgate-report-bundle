@@ -30,5 +30,6 @@ class SubscriptionRepository implements SubscriptionRepositoryInterface
         $response = $this->gatewayService->request($request);
 
         var_dump($response);
+        die();
     }
 }
