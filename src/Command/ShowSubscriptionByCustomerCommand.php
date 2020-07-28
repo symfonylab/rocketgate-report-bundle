@@ -10,7 +10,7 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use SymfonyLab\RocketGateReportBundle\Repository\SubscriptionRepositoryInterface;
 
-class ShowSubscriptionByCustomer extends Command
+class ShowSubscriptionByCustomerCommand extends Command
 {
     protected static $defaultName = 'rockergate:subscription:show-by-customer';
 

@@ -9,3 +9,7 @@ services:
       - '%env(ROCKETGATE_ADMIN_PASSWORD)%'
 
   SymfonyLab\RocketGateReportBundle\Repository\SubscriptionRepository:
+  SymfonyLab\RocketGateReportBundle\Command\ShowSubscriptionByCustomerCommand:
+    arguments:
+      - '@SymfonyLab\RocketGateReportBundle\Repository\SubscriptionRepository'
+    tags: 'console.command'
