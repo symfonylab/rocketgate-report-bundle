@@ -26,7 +26,6 @@ class SubscriptionRepository implements SubscriptionRepositoryInterface
         $this->gatewayService = $gatewayService;
     }
 
-
     public function findOneByCustomerId(MerchantInterface $merchant, int $siteId, string $customerId): ?SubscriptionInterface
     {
         $request = new MembershipsRequest();
@@ -35,8 +34,7 @@ class SubscriptionRepository implements SubscriptionRepositoryInterface
             ->setFromDate(new \DateTimeImmutable('-1 week'))
             ->setToDate(new \DateTimeImmutable())
             ->whereCustomerId($customerId)
-            ->whereSiteIds($siteId)
-        ;
+            ->whereSiteIds($siteId);
 
         $response = $this->gatewayService->request($request);
         if (!isset($response[0])) {
