@@ -3,11 +3,11 @@
 
 namespace SymfonyLab\RocketGateReportBundle\Command;
 
-use Nevmmv\RocketGate\Merchant;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
+use SymfonyLab\RocketGateReport\Merchant;
 use SymfonyLab\RocketGateReportBundle\Repository\SubscriptionRepositoryInterface;
 
 class ShowSubscriptionByCustomerCommand extends Command
@@ -45,7 +45,7 @@ class ShowSubscriptionByCustomerCommand extends Command
         $merchant = new Merchant(
             $input->getArgument('merchantId'),
             $input->getArgument('merchantPassword'),
-            ''
+            'test'
         );
 
         $subscription = $this->subscriptionRepository->findOneByCustomerId(
