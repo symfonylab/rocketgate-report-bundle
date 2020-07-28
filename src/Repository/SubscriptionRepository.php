@@ -16,6 +16,16 @@ class SubscriptionRepository implements SubscriptionRepositoryInterface
      */
     private $gatewayService;
 
+    /**
+     * SubscriptionRepository constructor.
+     * @param GatewayServiceInterface $gatewayService
+     */
+    public function __construct(GatewayServiceInterface $gatewayService)
+    {
+        $this->gatewayService = $gatewayService;
+    }
+
+
     public function findOneByCustomerId(MerchantInterface $merchant, int $siteId, string $customerId): ?SubscriptionInterface
     {
         $request = new MembershipsRequest();

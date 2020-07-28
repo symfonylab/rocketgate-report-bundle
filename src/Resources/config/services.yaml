@@ -9,6 +9,9 @@ services:
       - '%env(ROCKETGATE_ADMIN_PASSWORD)%'
 
   SymfonyLab\RocketGateReportBundle\Repository\SubscriptionRepository:
+    arguments:
+      - '@Nevmmv\RocketGate\GatewayService'
+
   SymfonyLab\RocketGateReportBundle\Command\ShowSubscriptionByCustomerCommand:
     arguments:
       - '@SymfonyLab\RocketGateReportBundle\Repository\SubscriptionRepository'
