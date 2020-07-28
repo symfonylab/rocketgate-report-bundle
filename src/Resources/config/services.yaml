@@ -1,0 +1,11 @@
+parameters:
+  env(ROCKETGATE_ADMIN_LOGIN): ''
+  env(ROCKETGATE_ADMIN_PASSWORD): ''
+
+services:
+  Nevmmv\RocketGate\GatewayService:
+    arguments:
+      - '%env(ROCKETGATE_ADMIN_LOGIN)%'
+      - '%env(ROCKETGATE_ADMIN_PASSWORD)%'
+
+  SymfonyLab\RocketGateReportBundle\Repository\SubscriptionRepository:
