@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace SymfonyLab\RocketGateReportBundle\Repository;
 
 
-use Nevmmv\RocketGate\MerchantInterface;
+use SymfonyLab\RocketGateReport\MerchantInterface;
 use SymfonyLab\RocketGateReportBundle\Model\SubscriptionInterface;
 
 interface SubscriptionRepositoryInterface

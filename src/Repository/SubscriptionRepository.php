@@ -4,9 +4,9 @@
 namespace SymfonyLab\RocketGateReportBundle\Repository;
 
 
-use Nevmmv\RocketGate\GatewayServiceInterface;
-use Nevmmv\RocketGate\MerchantInterface;
-use Nevmmv\RocketGate\Reports\MembershipsRequest;
+use SymfonyLab\RocketGateReport\GatewayServiceInterface;
+use SymfonyLab\RocketGateReport\MerchantInterface;
+use SymfonyLab\RocketGateReport\Reports\MembershipsRequest;
 use SymfonyLab\RocketGateReportBundle\Model\SubscriptionInterface;
 
 class SubscriptionRepository implements SubscriptionRepositoryInterface

@@ -16,7 +16,7 @@
         "php": "^7.3",
         "symfony/framework-bundle": "5.0.*|4.0.*",
         "symfony/console": "^5.0|^4.0",
-        "nevmmv/rocketgate-sdk": "^1.0"
+        "symfonylab/rocketgate-report": "^0.0.1"
     },
     "require-dev": {
         "symfony/phpunit-bridge": "^3.4|^4.0"
