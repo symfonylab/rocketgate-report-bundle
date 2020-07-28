@@ -51,14 +51,14 @@ class ShowSubscriptionByCustomerCommand extends Command
         $subscription = $this->subscriptionRepository->findOneByCustomerId(
             $merchant,
             (int)$input->getArgument('siteId'),
-            (int)$input->getArgument('customerId')
+            $input->getArgument('customerId')
         );
         if (!$subscription) {
             $output->writeln('Subscription not found');
             return 0;
         }
 
-        $output->writeln($subscription['status'].' / '.$subscription['cust_email']);
+        $output->writeln($subscription->getStatus().' / '.$subscription->getCustomerEmail());
     }
 
 }

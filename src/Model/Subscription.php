@@ -176,7 +176,7 @@ final class Subscription implements SubscriptionInterface
      * @param string $status
      * @param string $stickyMid
      */
-    public function __construct($affiliate, $currency, $customerPassword, $customerUsername, $customerEmail, $customerFirstName, $customerLastName, $initialAmount, $initialFrequency, $lastTransactionStatus, $merchantCustomerId, $merchantId, $merchantInvoiceId, $merchantName, $merchantProductId, $merchantSiteId, $merchantSiteName, $payNumL4, $rebillAmount, $rebillCancelBy, \DateTimeImmutable $rebillCancelRequestDate, \DateTimeImmutable $rebillDate, \DateTimeImmutable $rebillEndDate, $rebillFrequency, \DateTimeImmutable $rebillLastUpdatedDate, \DateTimeImmutable $rebillStartDate, $status, $stickyMid)
+    public function __construct($affiliate, $currency, $customerPassword, $customerUsername, $customerEmail, $customerFirstName, $customerLastName, $initialAmount, $initialFrequency, $lastTransactionStatus, $merchantCustomerId, $merchantId, $merchantInvoiceId, $merchantName, $merchantProductId, $merchantSiteId, $merchantSiteName, $payNumL4, $rebillAmount, $rebillCancelBy, ?\DateTimeImmutable $rebillCancelRequestDate, ?\DateTimeImmutable $rebillDate, ?\DateTimeImmutable $rebillEndDate, $rebillFrequency, ?\DateTimeImmutable $rebillLastUpdatedDate, ?\DateTimeImmutable $rebillStartDate, $status, $stickyMid)
     {
         $this->affiliate = $affiliate;
         $this->currency = $currency;
@@ -235,7 +235,7 @@ final class Subscription implements SubscriptionInterface
             $data['rebill_date'],
             $data['rebill_end_date'],
             $data['rebill_frequency'],
-            $data['rebil_last_updated_date'],
+            $data['rebill_last_updated_date'],
             $data['rebill_start_date'],
             $data['status'],
             $data['sticky_mid']
