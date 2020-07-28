@@ -24,7 +24,7 @@ class SubscriptionRepository implements SubscriptionRepositoryInterface
             ->setFromDate(new \DateTimeImmutable('-1 week'))
             ->setToDate(new \DateTimeImmutable())
             ->whereCustomerId($customerId)
-            ->whereSiteIds([$siteId])
+            ->whereSiteIds($siteId)
         ;
 
         $response = $this->gatewayService->request($request);
