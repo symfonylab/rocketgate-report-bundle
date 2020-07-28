@@ -57,8 +57,9 @@ class ShowSubscriptionByCustomerCommand extends Command
             $output->writeln('Subscription not found');
             return 0;
         }
-
         $output->writeln($subscription->getStatus().' / '.$subscription->getCustomerEmail());
+
+        return 0;
     }
 
 }
